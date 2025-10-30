@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Família Una - Letras e Acordes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Família Una</h1>
+  </header>
+
+  <nav class="tab-nav">
+    <button class="tab-button active" data-tab="letras">Letras</button>
+    <button class="tab-button" data-tab="acordes">Acordes</button>
+  </nav>
+
+  <section class="search-container">
+    <input type="text" id="searchInput" placeholder="Pesquisar título ou trecho...">
+  </section>
+
+  <section id="letras" class="tab-content active">
+    <ul id="letrasList"></ul>
+  </section>
+
+  <section id="acordes" class="tab-content">
+    <ul id="acordesList"></ul>
+  </section>
+
+  <!-- Modal -->
+  <div id="songModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <pre id="modalText"></pre>
+      <div id="modalTransposeContainer" class="transpose-container">
+        <label for="modalTranspose">Alterar tom:</label>
+        <select id="modalTranspose">
+          <option value="0">Original</option>
+          <option value="1">+1 semitom</option>
+          <option value="2">+2 semitons</option>
+          <option value="-1">-1 semitom</option>
+          <option value="-2">-2 semitons</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © Família Una - App de Letras e Acordes
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
